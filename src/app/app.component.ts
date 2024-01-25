@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {RestService} from "../services/rest.service";
+import {Employee} from "../interfaces/employee";
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,15 @@ import {RestService} from "../services/rest.service";
 export class AppComponent {
   title = 'tretton';
 
+  employees: Employee[];
+
   constructor(protected restService: RestService) {
   }
 
   ngOnInit(): void {
     this.restService.getEmployees().subscribe((employees) => {
       console.log(employees);
+      this.employees = employees;
     });
   }
 }

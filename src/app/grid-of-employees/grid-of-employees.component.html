@@ -1,0 +1,9 @@
+<div class="grid-cols-5 grid gap-2">
+  <div *ngFor="let employee of employees" class="flex flex-col gap-y-1 border-2 p-2">
+    <img *ngIf="employee.imagePortraitUrl" [src]="employee.imagePortraitUrl"
+         [alt]="'employee'" class="w-full h-72 object-cover object-top">
+    <img *ngIf="!employee.imagePortraitUrl" src="assets/stock_photo.jpg">
+    <span>{{employee.name}}</span>
+    <span>{{employee.area}}</span>
+  </div>
+</div>
