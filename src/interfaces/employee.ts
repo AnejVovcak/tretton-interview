@@ -10,7 +10,7 @@ export interface Employee {
   twitter?: string;
   stackOverflow?: string;
   linkedIn?: string;
-  imagePortraitUrl: string;
+  imagePortraitUrl?: string;
   imageWallOfLeetUrl: string;
   highlighted: boolean;
   published: boolean;
