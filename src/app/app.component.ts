@@ -12,6 +12,8 @@ export class AppComponent {
 
   employees: Employee[];
 
+  listToggleValue = false;
+
   constructor(protected restService: RestService) {
   }
 

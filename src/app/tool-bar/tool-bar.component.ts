@@ -12,7 +12,8 @@ export class ToolBarComponent {
   @Input() employees: Employee[];
   @Output() filterEmployees = new EventEmitter<Employee[]>();
 
-  listToggle: boolean = false;
+  @Output() listToggle = new EventEmitter<boolean>();
+  listToggleValue = false;
 
   sortByName() {
     this.filterEmployees.emit(this.employees.sort((a, b) => a.name.localeCompare(b.name)));
@@ -22,5 +23,9 @@ export class ToolBarComponent {
     this.filterEmployees.emit(this.employees.sort((a, b) => a.office.localeCompare(b.office)));
   }
 
+  emitListToggle() {
+    this.listToggleValue = !this.listToggleValue;
+    this.listToggle.emit(this.listToggleValue);
+  }
 
 }

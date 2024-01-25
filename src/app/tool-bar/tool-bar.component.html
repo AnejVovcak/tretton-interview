@@ -1,7 +1,7 @@
 <div class="border shadow h-14 w-96 flex items-center">
   <div class="pl-5 flex flex-row gap-x-2">
     <div>
-      <svg width="24px" height="24px" [attr.data-selected]="listToggle" (click)="listToggle=!listToggle"
+      <svg width="24px" height="24px" [attr.data-selected]="listToggleValue" (click)="emitListToggle()"
            class="data-[selected=true]:fill-air-force-blue data-[selected=false]:fill-french-gray
            data-[selected=true]:stroke-air-force-blue data-[selected=false]:stroke-french-gray
             cursor-pointer"
@@ -16,7 +16,8 @@
       </svg>
     </div>
     <div>
-      <svg width="24px" height="24px" viewBox="0 -0.5 21 21" class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" (click)="listToggle=!listToggle">
+      <svg width="24px" height="24px" viewBox="0 -0.5 21 21" class="cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+           (click)="emitListToggle()">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier"><title>grid_system [#1520]</title>
@@ -24,7 +25,7 @@
           <defs></defs>
           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="Dribbble-Light-Preview" transform="translate(-59.000000, -240.000000)"
-               [attr.data-selected]="!listToggle"
+               [attr.data-selected]="!listToggleValue"
                class="data-[selected=true]:fill-air-force-blue data-[selected=false]:fill-french-gray">
               <g id="icons" transform="translate(56.000000, 160.000000)">
                 <path
