@@ -34,4 +34,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        run: ng deploy --base-href=/gh-strani-test/ --no-silent --name="Anej" --email=team@angular.schule
+        run: ng deploy --base-href=/tretton-interview/ --no-silent --name="Anej" --email=team@angular.schule
