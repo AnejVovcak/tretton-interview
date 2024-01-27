@@ -1,59 +1,31 @@
-name: Angular CI/CD
+name: Deploy to GitHub Pages - test
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build Angular app
-        run: npm run build
-
-      - name: set up git
-        run: |
-          git checkout -b gh-pages
-
-      - name: install ng
+      - name: Add ng cli
         run: npm install -g @angular/cli
 
-      - name: Create and copy 404.html
-        run: |
-          ng build --output-path docs --base-href /tretton-interview/
-          git config user.email "${{ secrets.GIT_CONFIG_EMAIL }}"
-          git config user.name "${{ secrets.GIT_CONFIG_NAME }}"
-          cp docs/index.html docs/404.html
-          git add docs
-          git commit -m "Update 404.html for GitHub Pages"
-          git push origin gh-pages
-
-      - name: print dir
-        run: ls
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-      - name: echo dir
-        run: ls
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          BRANCH: gh-pages
-          FOLDER: docs
-          CLEAN: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        run: ng deploy --base-href=/gh-strani-test/ --no-silent --name="Anej" --email=team@angular.schule
