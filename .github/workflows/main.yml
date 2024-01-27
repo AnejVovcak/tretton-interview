@@ -33,9 +33,11 @@ jobs:
     needs: build
 
     steps:
+      - name: echo dir
+        run: ls -la dist/tretton
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           BRANCH: gh-pages
-          FOLDER: dist/tretton
+          FOLDER: dist
           CLEAN: true
