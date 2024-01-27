@@ -24,9 +24,17 @@ jobs:
       - name: Build Angular app
         run: npm run build
 
-      - name: Generate 404.html file
+      - name: Create and copy 404.html
         run: |
-          cp dist/tretton/index.html dist/tretton/404.html
+          git checkout -b gh-pages
+          ng build --output-path docs --base-href /tretton-interview/
+          cp docs/index.html docs/404.html
+          git add docs
+          git commit -m "Update 404.html for GitHub Pages"
+          git push origin gh-pages
+
+      - name: print dir
+        run: ls
 
   deploy:
     runs-on: ubuntu-latest
@@ -34,10 +42,10 @@ jobs:
 
     steps:
       - name: echo dir
-        run: ls -la dist/tretton
+        run: ls
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           BRANCH: gh-pages
-          FOLDER: dist
+          FOLDER: docs
           CLEAN: true
