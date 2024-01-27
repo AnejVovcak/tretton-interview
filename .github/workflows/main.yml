@@ -24,6 +24,12 @@ jobs:
       - name: Add ng cli
         run: npm install -g @angular/cli
 
+      - name: Replace api_url in environment.ts
+        run: sed -i "s/API_URL/${{ secrets.API_URL }}/g" src/environments/environment.ts
+
+      - name: Replace api_key in environment.prod.ts
+        run: sed -i "s/API_KEY/${{ secrets.API_KEY }}/g" src/environments/environment.ts
+
       - name: Deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
