@@ -34,6 +34,8 @@ jobs:
       - name: Create and copy 404.html
         run: |
           ng build --output-path docs --base-href /tretton-interview/
+          git config user.email "${{ secrets.GIT_CONFIG_EMAIL }}"
+          git config user.name "${{ secrets.GIT_CONFIG_NAME }}"
           cp docs/index.html docs/404.html
           git add docs
           git commit -m "Update 404.html for GitHub Pages"
