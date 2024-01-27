@@ -24,6 +24,10 @@ jobs:
       - name: Build Angular app
         run: npm run build
 
+      - name: Generate 404.html file
+        run: |
+          cp dist/tretton/index.html dist/tretton/404.html
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
