@@ -24,9 +24,15 @@ jobs:
       - name: Build Angular app
         run: npm run build
 
-      - name: Create and copy 404.html
+      - name: set up git
         run: |
           git checkout -b gh-pages
+
+      - name: install ng
+        run: npm install -g @angular/cli
+
+      - name: Create and copy 404.html
+        run: |
           ng build --output-path docs --base-href /tretton-interview/
           cp docs/index.html docs/404.html
           git add docs
