@@ -20,7 +20,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.restService.getEmployees().subscribe((employees) => {
       console.log(employees);
-      this.employees = employees;
+      this.employees = employees.sort(() => Math.random() - 0.5);
     });
   }
 }
