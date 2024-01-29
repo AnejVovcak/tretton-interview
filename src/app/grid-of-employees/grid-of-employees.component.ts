@@ -11,7 +11,7 @@ import {Employee} from "../../interfaces/employee";
               <img [src]="employee.imagePortraitUrl ? employee.imagePortraitUrl : 'assets/stock_photo.jpg'"
                    [alt]="'employee'" class="w-full h-4/5 object-cover object-top">
               <div class="flex flex-col gap-y-2">
-                  <app-office-component class="flex items-center -ml-1" [employee]="employee"></app-office-component>
+                  <app-office-component class="flex items-center -mb-2 -ml-1" [employee]="employee"></app-office-component>
                   <div class="flex flex-row gap-x-1 justify-between items-center">
                       <span class="text-air-force-blue font-extrabold">{{employee.name}}</span>
                       <div class="flex flex-row gap-x-1">
