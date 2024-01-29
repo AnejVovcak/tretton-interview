@@ -1,27 +1,31 @@
-# Tretton
+# Tretton37 Colleague Showcase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+Explore the Tretton37 team with my Colleague Showcase web app!
 
-## Development server
+## Motivation and Package Selection
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Angular provides the backbone, GitHub Pages offers a public URL, and GitHub Actions ensures a CI/CD pipeline. Practical choices for a seamless development experience.
+To achieve a polished look, I used Tailwind CSS.
+To achieve continues integration, I used `angular-cli-ghpages` library.
+The project secrets are stored in GitHub Secrets.
+I designed the project with code reusability in mind.
 
-## Code scaffolding
+## Selected User Stories
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Responsive Design:** Perfectly adapts to various devices.
+- **Modern CSS:** Utilizes grid layouts and variables for a polished look.
+- **Switch Views:** Toggle between grid and list views for user preference.
+- **Public URL:** Hosted on [GitHub Pages](https://anejvovcak.github.io/tretton-interview/).
+- **CI/CD Pipeline:** Automated with GitHub Actions for efficiency.
+- **Use Typescript:** Utilizes Typescript for type safety. I defined Employee interface to ensure type safety.
 
-## Build
+## Installation and Usage Instructions
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repo.
+2. Navigate to the project directory.
+3. Install dependencies (`npm install`).
+4. Change the keys in `src/environments/environment.ts` to your own.
+4. Build the app (`ng build`).
+5. Run the app (`ng serve`) and access it locally.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Check out the Tretton37 Colleague Showcase at [GitHub Pages](https://anejvovcak.github.io/tretton-interview/).
