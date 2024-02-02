@@ -14,8 +14,8 @@ I designed the project with code reusability in mind.
 
 - **Responsive Design:** Perfectly adapts to various devices.
 - **Modern CSS:** Utilizes grid layouts and variables for a polished look.
-- **Switch Views:** Toggle between grid and list views for user preference.
-- **Public URL:** Hosted on [GitHub Pages](https://anejvovcak.github.io/tretton-interview/).
+- **Switch Views:** Toggle between grid and list views for user preference. 
+- ~~**Public URL:** Hosted on [GitHub Pages](https://anejvovcak.github.io/tretton-interview/).~~
 - **CI/CD Pipeline:** Automated with GitHub Actions for efficiency.
 - **Use Typescript:** Utilizes Typescript for type safety. I defined Employee interface to ensure type safety.
 
@@ -28,4 +28,4 @@ I designed the project with code reusability in mind.
 4. Build the app (`ng build`).
 5. Run the app (`ng serve`) and access it locally.
 
-Check out the Tretton37 Colleague Showcase at [GitHub Pages](https://anejvovcak.github.io/tretton-interview/).
+~~Check out the Tretton37 Colleague Showcase at [GitHub Pages](https://anejvovcak.github.io/tretton-interview/).~~
